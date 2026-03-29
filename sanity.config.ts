@@ -9,6 +9,7 @@ export default defineConfig({
   title: "Covenant Leather Co.",
   projectId: "g3ey8k4o",
   dataset: "production",
+  basePath: "/studio",
   plugins: [structureTool()],
   schema: {
     types: [productSchema],
