@@ -89,6 +89,41 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-parchment);
 }
 
+/* Blog prose styles */
+.prose-custom p {
+  color: #444;
+  line-height: 1.85;
+  margin-bottom: 1.4rem;
+  font-size: 1.05rem;
+}
+.prose-custom h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #2C2C2C;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+.prose-custom h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2C2C2C;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+.prose-custom ul, .prose-custom ol {
+  margin: 1rem 0 1.4rem 1.5rem;
+  color: #444;
+  line-height: 1.85;
+}
+.prose-custom ul { list-style: disc; }
+.prose-custom ol { list-style: decimal; }
+.prose-custom li { margin-bottom: 0.4rem; }
+.prose-custom strong { color: #2C2C2C; font-weight: 600; }
+.prose-custom em { font-style: italic; }
+.prose-custom a { color: #6B3A2A; text-decoration: underline; }
+
 /* Section divider */
 .divider-gold {
   height: 1px;

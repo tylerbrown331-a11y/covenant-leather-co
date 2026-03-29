@@ -36,6 +36,7 @@ export default function Navbar() {
               { href: "/collections/gifts", label: "Gifts" },
               { href: "/about", label: "Our Story" },
               { href: "/blog", label: "Journal" },
+              { href: "/contact", label: "Contact" },
             ].map(({ href, label }) => (
               <Link
                 key={href}
@@ -100,6 +101,7 @@ export default function Navbar() {
               { href: "/collections/gifts", label: "Gifts" },
               { href: "/about", label: "Our Story" },
               { href: "/blog", label: "Journal" },
+              { href: "/contact", label: "Contact" },
               { href: "/cart", label: "Cart" },
             ].map(({ href, label }) => (
               <Link

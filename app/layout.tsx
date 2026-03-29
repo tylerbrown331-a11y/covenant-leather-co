@@ -39,6 +39,26 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cinzel:wght@400;500;600&display=swap"
           rel="stylesheet"
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              name: "Covenant Leather Co.",
+              description: "Handmade genuine leather journals crafted for missionaries, scripture study, and meaningful gifting.",
+              url: "https://covenantleatherco.com",
+              founder: { "@type": "Person", name: "Benjamin S. Fowler" },
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Saratoga Springs",
+                addressRegion: "UT",
+                addressCountry: "US",
+              },
+              sameAs: ["https://github.com/tylerbrown331-a11y/covenant-leather-co"],
+            }),
+          }}
+        />
       </head>
       <body className="min-h-screen flex flex-col bg-[#FAF7F2] text-[#2C2C2C]">
         <CartProvider>
