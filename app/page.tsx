@@ -42,7 +42,7 @@ export default function HomePage() {
         {/* Content */}
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           <p
-            className="text-xs tracking-[0.4em] uppercase text-[#C49A3C] mb-6"
+            className="text-xs tracking-[0.4em] uppercase text-white mb-6"
             style={{ fontFamily: "'Cinzel', serif" }}
           >
             Crafted to Last. Made to Record.
