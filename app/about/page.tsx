@@ -111,7 +111,7 @@ export default function AboutPage() {
             </div>
 
             {/* Engraving photo with pull quote */}
-            <div className="mt-10 border-l-4 border-[#C49A3C] pl-6">
+            <div className="mt-10 border-l-4 border-[#6B3A2A] pl-6">
               <p
                 className="text-xl italic text-[#2C2C2C] leading-relaxed"
                 style={{ fontFamily: "'Playfair Display', serif" }}
@@ -204,7 +204,7 @@ export default function AboutPage() {
             ].map((s) => (
               <div key={s.step} className="text-center">
                 <span
-                  className="text-4xl font-bold text-[#C49A3C] opacity-50"
+                  className="text-4xl font-bold text-[#8B6A2A] opacity-70"
                   style={{ fontFamily: "'Cinzel', serif" }}
                 >
                   {s.step}

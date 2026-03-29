@@ -16,7 +16,7 @@ export default function Footer() {
               Covenant Leather Co.
             </p>
             <div className="h-px w-16 bg-[#C49A3C] mb-4" />
-            <p className="text-sm text-[#c8bfa8] leading-relaxed max-w-xs" style={{ fontFamily: "'Lora', serif" }}>
+            <p className="text-sm text-[#d9cfc0] leading-relaxed max-w-xs" style={{ fontFamily: "'Lora', serif" }}>
               Handmade genuine leather journals, crafted for a life worth recording. Every journal is
               made by hand — built to outlast the stories inside it.
             </p>
@@ -35,7 +35,7 @@ export default function Footer() {
                 Join
               </button>
             </form>
-            <p className="text-xs text-[#888] mt-2">10% off your first journal when you sign up.</p>
+            <p className="text-xs text-[#aaa] mt-2">10% off your first journal when you sign up.</p>
           </div>
 
           {/* Shop Links */}
@@ -46,7 +46,7 @@ export default function Footer() {
             >
               Shop
             </h4>
-            <ul className="space-y-2 text-sm text-[#c8bfa8]" style={{ fontFamily: "'Lora', serif" }}>
+            <ul className="space-y-2 text-sm text-[#d9cfc0]" style={{ fontFamily: "'Lora', serif" }}>
               {[
                 { href: "/products", label: "All Journals" },
                 { href: "/collections/missions", label: "Mission Journals" },
@@ -71,7 +71,7 @@ export default function Footer() {
             >
               Info
             </h4>
-            <ul className="space-y-2 text-sm text-[#c8bfa8]" style={{ fontFamily: "'Lora', serif" }}>
+            <ul className="space-y-2 text-sm text-[#d9cfc0]" style={{ fontFamily: "'Lora', serif" }}>
               {[
                 { href: "/about", label: "Our Story" },
                 { href: "/blog", label: "The Journal" },
@@ -89,14 +89,14 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-[#3a3a3a] flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-[#666]" style={{ fontFamily: "'Lora', serif" }}>
+          <p className="text-xs text-[#999]" style={{ fontFamily: "'Lora', serif" }}>
             © {new Date().getFullYear()} Covenant Leather Co. All rights reserved. Handmade in the USA.
           </p>
-          <div className="flex gap-6 text-xs text-[#666]">
-            <Link href="/faq" className="hover:text-[#c8bfa8] transition-colors">
+          <div className="flex gap-6 text-xs text-[#999]">
+            <Link href="/faq" className="hover:text-[#d9cfc0] transition-colors">
               Shipping & Returns
             </Link>
-            <Link href="/faq" className="hover:text-[#c8bfa8] transition-colors">
+            <Link href="/faq" className="hover:text-[#d9cfc0] transition-colors">
               Privacy
             </Link>
           </div>

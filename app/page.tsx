@@ -65,7 +65,7 @@ export default function HomePage() {
             <Link href="/products" className="btn-primary inline-block text-center">
               Shop Journals
             </Link>
-            <Link href="/about" className="btn-outline inline-block text-center border-[#F4ECD8] text-[#F4ECD8] hover:bg-[#F4ECD8] hover:text-[#2C2C2C]">
+            <Link href="/about" className="btn-outline inline-block text-center border-white text-white hover:bg-white hover:text-[#2C2C2C]">
               Our Story
             </Link>
           </div>
@@ -273,7 +273,7 @@ export default function HomePage() {
                 className="bg-white p-8 border border-[#E8D9BC] relative"
               >
                 <span
-                  className="text-5xl text-[#C49A3C] leading-none absolute top-4 left-6 opacity-40"
+                  className="text-5xl text-[#C49A3C] leading-none absolute top-4 left-6 opacity-60"
                   style={{ fontFamily: "'Playfair Display', serif" }}
                 >
                   &ldquo;

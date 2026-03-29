@@ -28,7 +28,7 @@ export default function MissionsCollectionPage() {
           Mission Journals
         </h1>
         <p
-          className="text-lg text-[#c8d4e8] max-w-xl mx-auto leading-relaxed"
+          className="text-lg text-[#dce4f0] max-w-xl mx-auto leading-relaxed"
           style={{ fontFamily: "'Lora', serif" }}
         >
           Two years is a short time to serve and a long time to forget. These journals are built
