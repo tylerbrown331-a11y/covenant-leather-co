@@ -14,7 +14,7 @@ const posts = [
     title: "What to Write in Your Mission Journal: A Week-by-Week Guide",
     excerpt:
       "A mission goes fast. Here's how to make sure you record the parts that matter — the lessons, the people, the quiet moments between.",
-    image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&q=80",
+    image: "/images/journal-open-lined-pages.webp",
     date: "March 15, 2026",
     readTime: "8 min read",
   },
@@ -23,7 +23,7 @@ const posts = [
     title: "How to Choose the Right Leather Journal for Your Mission",
     excerpt:
       "Not all leather journals are created equal. Here's what to look for — and what to avoid — when choosing a journal that will survive two years of daily use.",
-    image: "https://images.unsplash.com/photo-1532012197267-da84d127e765?w=800&q=80",
+    image: "/images/journals-color-spread-wood.webp",
     date: "February 28, 2026",
     readTime: "6 min read",
   },
@@ -32,7 +32,7 @@ const posts = [
     title: "The Best Gifts for a Missionary (From Someone Who Actually Cares)",
     excerpt:
       "Skip the plastic. Give something that will be carried, worn in, and treasured long after the mission is done.",
-    image: "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=800&q=80",
+    image: "/images/engraving-benjamin-fowler.webp",
     date: "February 10, 2026",
     readTime: "5 min read",
   },
@@ -41,7 +41,7 @@ const posts = [
     title: "How to Care for a Genuine Leather Journal",
     excerpt:
       "Leather is a living material. Here's how to keep your journal looking beautiful and aging gracefully for decades.",
-    image: "https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=800&q=80",
+    image: "/images/raw-leather-hide.webp",
     date: "January 20, 2026",
     readTime: "4 min read",
   },
@@ -50,7 +50,7 @@ const posts = [
     title: "Why Handwritten Journals Still Matter",
     excerpt:
       "In a world of screens, there is still something irreplaceable about putting pen to paper. The science, the history, and the personal case for writing by hand.",
-    image: "https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=800&q=80",
+    image: "/images/stitching-detail-closeup.webp",
     date: "January 5, 2026",
     readTime: "7 min read",
   },

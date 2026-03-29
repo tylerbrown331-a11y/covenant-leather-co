@@ -45,9 +45,9 @@ export const products: Product[] = [
       "Every missionary who carries this journal carries something that will last longer than their time in the field. The leather softens with use, the pages fill with testimony, and years later it still sits on a shelf as a record of who you were when it mattered most. This is not a notebook. It's an heirloom.",
     price_base: 89,
     images: [
-      "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=800&q=80",
-      "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=800&q=80",
-      "https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=800&q=80",
+      "/images/journal-burgundy-solo.webp",
+      "/images/journals-brown-olive-spread.webp",
+      "/images/stitching-detail-closeup.webp",
     ],
     variants: {
       size: ["Pocket (4x6)", "Standard (5x8)", "Large (8x10)"],
@@ -78,8 +78,8 @@ export const products: Product[] = [
       "It started as a pocket journal and became something more: a daily companion that survived rain in the Philippines, cold in Ukraine, and heat in São Paulo. The Mission Companion is small enough to carry everywhere and substantial enough to hold everything worth remembering.",
     price_base: 64,
     images: [
-      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
-      "https://images.unsplash.com/photo-1532012197267-da84d127e765?w=800&q=80",
+      "/images/journals-distressed-stack.webp",
+      "/images/journals-color-spread-wood.webp",
     ],
     variants: {
       size: ["Pocket (4x6)", "Standard (5x8)"],
@@ -110,8 +110,8 @@ export const products: Product[] = [
       "Some things deserve to be written down. The impressions that come during early-morning study, the cross-references that unlock a passage, the prompting you don't want to forget. The Scripture Journal was designed to sit open beside your scriptures without closing on you — a quiet partner in the work of understanding.",
     price_base: 79,
     images: [
-      "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&q=80",
-      "https://images.unsplash.com/photo-1548438294-1ad5d5f4f063?w=800&q=80",
+      "/images/journal-open-lined-pages.webp",
+      "/images/journals-color-spread-white.webp",
     ],
     variants: {
       size: ["Standard (5x8)", "Large (8x10)"],
@@ -142,8 +142,8 @@ export const products: Product[] = [
       "Two journals. One story. The Heritage Set pairs our flagship Covenant Journal with the Mission Companion — made from the same hide, stitched with the same thread. Give them together before a mission. Give them at a wedding. Give them whenever the moment calls for something that will last.",
     price_base: 139,
     images: [
-      "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=800&q=80",
-      "https://images.unsplash.com/photo-1428592953211-077101b2021b?w=800&q=80",
+      "/images/journals-set-two-sizes-in-progress.webp",
+      "/images/journal-tied-cord.webp",
     ],
     variants: {
       size: ["Standard (5x8)"],

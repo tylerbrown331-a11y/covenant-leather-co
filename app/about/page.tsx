@@ -70,8 +70,8 @@ export default function AboutPage() {
           </div>
           <div className="flex-shrink-0 w-full md:w-96 aspect-[4/5] relative overflow-hidden">
             <Image
-              src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=800&q=80"
-              alt="Leather tools and a handmade journal in progress"
+              src="/images/engraving-benjamin-fowler.webp"
+              alt="Benjamin S. Fowler name engraved on a handmade leather journal"
               fill
               className="object-cover"
             />

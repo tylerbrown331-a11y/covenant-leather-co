@@ -11,14 +11,14 @@ export default function HomePage() {
       title: "What to Write in Your Mission Journal: A Week-by-Week Guide",
       excerpt:
         "A mission goes fast. Here's how to make sure you record the parts that matter — the lessons, the people, the quiet moments between.",
-      image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=600&q=80",
+      image: "/images/journal-open-lined-pages.webp",
     },
     {
       slug: "best-gifts-for-a-missionary",
       title: "The Best Gifts for a Missionary (From Someone Who Actually Cares)",
       excerpt:
         "Skip the plastic. Give something that will be carried, worn in, and treasured long after the mission is done.",
-      image: "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600&q=80",
+      image: "/images/engraving-benjamin-fowler.webp",
     },
   ];
 
@@ -29,8 +29,8 @@ export default function HomePage() {
         {/* Background image */}
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=1600&q=80"
-            alt="Handmade leather journal on a worn wooden surface"
+            src="/images/journal-tied-cord.webp"
+            alt="Handmade leather journal tied with linen cord"
             fill
             className="object-cover opacity-40"
             priority
@@ -96,21 +96,21 @@ export default function HomePage() {
                 href: "/collections/missions",
                 title: "Mission Journals",
                 subtitle: "For two years that define a lifetime",
-                image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
+                image: "/images/journals-distressed-stack.webp",
                 accent: "#1a2a4a",
               },
               {
                 href: "/collections/gifts",
                 title: "Gift Sets",
                 subtitle: "Give something that will last",
-                image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=800&q=80",
+                image: "/images/journals-set-two-sizes-in-progress.webp",
                 accent: "#4E2A1C",
               },
               {
                 href: "/products/scripture-journal",
                 title: "Scripture Journals",
                 subtitle: "Margin room for every prompting",
-                image: "https://images.unsplash.com/photo-1548438294-1ad5d5f4f063?w=800&q=80",
+                image: "/images/journal-open-lined-pages.webp",
                 accent: "#2C2C2C",
               },
             ].map((col) => (
@@ -187,8 +187,8 @@ export default function HomePage() {
             </div>
             <div className="flex-shrink-0 w-full md:w-80 aspect-square relative overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&q=80"
-                alt="Leather working tools and thread"
+                src="/images/workbench-leather-hides.webp"
+                alt="Ben Fowler's leather working bench with hides and journals"
                 fill
                 className="object-cover"
               />
