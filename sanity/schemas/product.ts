@@ -14,6 +14,7 @@ export const productSchema = defineType({
     defineField({
       name: "slug",
       title: "Slug (URL)",
+      description: "Click 'Generate' after entering the product name. This becomes the web address, e.g. /products/my-new-journal.",
       type: "slug",
       options: { source: "name" },
       validation: (r) => r.required(),
@@ -58,23 +59,30 @@ export const productSchema = defineType({
     defineField({
       name: "in_stock",
       title: "In Stock",
+      description: "Uncheck this to hide the product from the website without deleting it.",
       type: "boolean",
       initialValue: true,
     }),
     defineField({
       name: "tags",
-      title: "Tags",
+      title: "⚠️ Tags — CONTROLS WHICH PAGES THIS PRODUCT APPEARS ON",
+      description:
+        "Select ALL that apply. " +
+        "→ 'mission' = shows on the Mission Journals page. " +
+        "→ 'gift' = shows on the Gifts page. " +
+        "→ 'bestseller' = shows in the Featured section on the Homepage. " +
+        "Every product always appears on the Shop All page regardless of tags.",
       type: "array",
       of: [{ type: "string" }],
       options: {
         list: [
-          { title: "Mission", value: "mission" },
-          { title: "Gift", value: "gift" },
-          { title: "Scripture", value: "scripture" },
-          { title: "Best Seller", value: "bestseller" },
-          { title: "Pocket", value: "pocket" },
-          { title: "Set", value: "set" },
-          { title: "Mission Favorite", value: "mission favorite" },
+          { title: "✅ mission → appears on Mission Journals page", value: "mission" },
+          { title: "✅ gift → appears on Gifts page", value: "gift" },
+          { title: "✅ bestseller → appears on Homepage featured section", value: "bestseller" },
+          { title: "scripture", value: "scripture" },
+          { title: "pocket", value: "pocket" },
+          { title: "set", value: "set" },
+          { title: "mission favorite", value: "mission favorite" },
         ],
       },
     }),
