@@ -1,8 +1,8 @@
 import type { MetadataRoute } from "next";
-import { products } from "@/lib/products";
+import { getAllProducts } from "@/sanity/queries";
 import { blogPosts } from "@/lib/blog";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const base = "https://covenantleatherco.com";
 
   const staticPages = [
@@ -16,6 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/contact`, priority: 0.6, changeFrequency: "yearly" as const },
   ];
 
+  const products = await getAllProducts();
   const productPages = products.map((p) => ({
     url: `${base}/products/${p.slug}`,
     priority: 0.9,

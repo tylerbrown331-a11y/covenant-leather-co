@@ -1,10 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
-import { getFeaturedProducts, products } from "@/lib/products";
+import { getFeaturedProducts } from "@/sanity/queries";
 import ProductCard from "@/components/ProductCard";
 
-export default function HomePage() {
-  const featured = getFeaturedProducts();
+export default async function HomePage() {
+  const featured = await getFeaturedProducts();
   const blogPreviews = [
     {
       slug: "what-to-write-mission-journal",

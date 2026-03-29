@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { getProductsByTag } from "@/lib/products";
+import { getProductsByTag } from "@/sanity/queries";
 import ProductCard from "@/components/ProductCard";
 
 export const metadata: Metadata = {
@@ -8,8 +8,8 @@ export const metadata: Metadata = {
     "Genuine leather journals made for missionaries. Rugged, faithful, and built for two years of daily use. The best LDS mission journal you can carry.",
 };
 
-export default function MissionsCollectionPage() {
-  const products = getProductsByTag("mission");
+export default async function MissionsCollectionPage() {
+  const products = await getProductsByTag("mission");
 
   return (
     <>

@@ -1,15 +1,15 @@
 import { Metadata } from "next";
-import { getProductsByTag } from "@/lib/products";
+import { getProductsByTag } from "@/sanity/queries";
 import ProductCard from "@/components/ProductCard";
 
 export const metadata: Metadata = {
   title: "Gift Journals",
   description:
-    "Meaningful leather journal gift sets for missionaries, missionaries, scripture study, and anyone who deserves something handmade and lasting.",
+    "Meaningful leather journal gift sets for missionaries, scripture study, and anyone who deserves something handmade and lasting.",
 };
 
-export default function GiftsCollectionPage() {
-  const products = getProductsByTag("gift");
+export default async function GiftsCollectionPage() {
+  const products = await getProductsByTag("gift");
 
   return (
     <>
