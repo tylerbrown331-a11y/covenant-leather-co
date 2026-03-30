@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import { blogPosts } from "@/lib/blog";
 
 export const metadata: Metadata = {
   title: "Journal",
@@ -8,56 +9,9 @@ export const metadata: Metadata = {
     "Stories, guides, and thoughts on journaling, missionary life, leather care, and living a life worth recording.",
 };
 
-const posts = [
-  {
-    slug: "what-to-write-mission-journal",
-    title: "What to Write in Your Mission Journal: A Week-by-Week Guide",
-    excerpt:
-      "A mission goes fast. Here's how to make sure you record the parts that matter — the lessons, the people, the quiet moments between.",
-    image: "/images/journal-open-lined-pages.webp",
-    date: "March 15, 2026",
-    readTime: "8 min read",
-  },
-  {
-    slug: "how-to-choose-leather-journal-mission",
-    title: "How to Choose the Right Leather Journal for Your Mission",
-    excerpt:
-      "Not all leather journals are created equal. Here's what to look for — and what to avoid — when choosing a journal that will survive two years of daily use.",
-    image: "/images/journals-color-spread-wood.webp",
-    date: "February 28, 2026",
-    readTime: "6 min read",
-  },
-  {
-    slug: "best-gifts-for-a-missionary",
-    title: "The Best Gifts for a Missionary (From Someone Who Actually Cares)",
-    excerpt:
-      "Skip the plastic. Give something that will be carried, worn in, and treasured long after the mission is done.",
-    image: "/images/engraving-benjamin-fowler.webp",
-    date: "February 10, 2026",
-    readTime: "5 min read",
-  },
-  {
-    slug: "how-to-care-for-genuine-leather-journal",
-    title: "How to Care for a Genuine Leather Journal",
-    excerpt:
-      "Leather is a living material. Here's how to keep your journal looking beautiful and aging gracefully for decades.",
-    image: "/images/raw-leather-hide.webp",
-    date: "January 20, 2026",
-    readTime: "4 min read",
-  },
-  {
-    slug: "why-handwritten-journals-still-matter",
-    title: "Why Handwritten Journals Still Matter",
-    excerpt:
-      "In a world of screens, there is still something irreplaceable about putting pen to paper. The science, the history, and the personal case for writing by hand.",
-    image: "/images/stitching-detail-closeup.webp",
-    date: "January 5, 2026",
-    readTime: "7 min read",
-  },
-];
 
 export default function BlogPage() {
-  const [featured, ...rest] = posts;
+  const [featured, ...rest] = blogPosts;
 
   return (
     <>
