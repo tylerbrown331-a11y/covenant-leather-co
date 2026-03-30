@@ -35,7 +35,7 @@ export default function Navbar() {
               { href: "/collections/missions", label: "Missions" },
               { href: "/collections/gifts", label: "Gifts" },
               { href: "/about", label: "Our Story" },
-              { href: "/blog", label: "Journal" },
+              { href: "/blog", label: "Stories" },
               { href: "/contact", label: "Contact" },
             ].map(({ href, label }) => (
               <Link
@@ -100,7 +100,7 @@ export default function Navbar() {
               { href: "/collections/missions", label: "Mission Journals" },
               { href: "/collections/gifts", label: "Gifts" },
               { href: "/about", label: "Our Story" },
-              { href: "/blog", label: "Journal" },
+              { href: "/blog", label: "Stories" },
               { href: "/contact", label: "Contact" },
               { href: "/cart", label: "Cart" },
             ].map(({ href, label }) => (
