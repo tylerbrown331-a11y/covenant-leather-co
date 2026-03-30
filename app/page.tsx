@@ -65,7 +65,7 @@ export default async function HomePage() {
             <Link href="/products" className="btn-primary inline-block text-center">
               Shop Journals
             </Link>
-            <Link href="/about" className="btn-outline inline-block text-center border-white text-white hover:bg-white hover:text-[#2C2C2C]">
+            <Link href="/about" className="inline-block text-center px-8 py-3 border-2 border-[#FAF7F2] text-[#FAF7F2] font-semibold tracking-widest uppercase text-sm bg-white/10 backdrop-blur-sm hover:bg-[#FAF7F2] hover:text-[#2C2C2C] transition-all">
               Our Story
             </Link>
           </div>
