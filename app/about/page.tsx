@@ -6,11 +6,39 @@ export const metadata: Metadata = {
   title: "Our Story",
   description:
     "Covenant Leather Co. was born from a bishop's tradition — handmade leather journals given to every young missionary he sent into the field. Learn the story behind the brand.",
+  openGraph: {
+    title: "Our Story | Covenant Leather Co.",
+    description: "A bishop's tradition of giving handmade leather journals to every missionary he sent into the field.",
+    type: "website",
+    images: [{ url: "/images/Ben-Fowler.webp", alt: "Benjamin S. Fowler, founder of Covenant Leather Co." }],
+  },
 };
 
 export default function AboutPage() {
+  const personSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Benjamin S. Fowler",
+    jobTitle: "Founder & Craftsman",
+    description: "Benjamin S. Fowler is the founder of Covenant Leather Co., a handmade leather journal maker based in Saratoga Springs, Utah. As a bishop in The Church of Jesus Christ of Latter-day Saints, he developed a tradition of making handmade leather journals for every missionary he sent into the field.",
+    url: "https://www.covenantleatherco.com/about",
+    image: "https://www.covenantleatherco.com/images/Ben-Fowler.webp",
+    worksFor: {
+      "@type": "Organization",
+      name: "Covenant Leather Co.",
+      url: "https://www.covenantleatherco.com",
+    },
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Saratoga Springs",
+      addressRegion: "UT",
+      addressCountry: "US",
+    },
+  };
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
+
       {/* Hero */}
       <section className="relative bg-[#2C2C2C] py-32 text-center px-4 overflow-hidden">
         <div className="absolute inset-0 opacity-20">

@@ -1,5 +1,18 @@
+import type { Metadata } from "next";
 import { getAllProducts } from "@/sanity/queries";
 import ProductsFilterClient from "@/components/ProductsFilterClient";
+
+export const metadata: Metadata = {
+  title: "All Journals",
+  description:
+    "Shop all handmade genuine leather journals from Covenant Leather Co. — mission journals, scripture journals, and gift sets, handcrafted in Saratoga Springs, Utah.",
+  openGraph: {
+    title: "All Journals | Covenant Leather Co.",
+    description: "Shop handmade genuine leather journals for missionaries, scripture study, and gifting.",
+    type: "website",
+    images: [{ url: "/images/journals-color-spread-wood.webp", alt: "Handmade leather journals by Covenant Leather Co." }],
+  },
+};
 
 export default async function ProductsPage() {
   const products = await getAllProducts();

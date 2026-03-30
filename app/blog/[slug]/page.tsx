@@ -38,6 +38,16 @@ export default async function BlogPostPage({ params }: Props) {
 
   const related = blogPosts.filter((p) => p.slug !== slug).slice(0, 2);
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.covenantleatherco.com" },
+      { "@type": "ListItem", position: 2, name: "Stories", item: "https://www.covenantleatherco.com/blog" },
+      { "@type": "ListItem", position: 3, name: post.title, item: `https://www.covenantleatherco.com/blog/${post.slug}` },
+    ],
+  };
+
   // JSON-LD Article schema for EEAT
   const jsonLd = {
     "@context": "https://schema.org",
@@ -61,6 +71,7 @@ export default async function BlogPostPage({ params }: Props) {
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
