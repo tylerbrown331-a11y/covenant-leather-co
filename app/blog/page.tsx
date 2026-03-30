@@ -1,14 +1,13 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { blogPosts } from "@/lib/blog";
+import { blogPosts, categories, getCategoryBySlug } from "@/lib/blog";
 
 export const metadata: Metadata = {
-  title: "Journal",
+  title: "Stories & Guides",
   description:
     "Stories, guides, and thoughts on journaling, missionary life, leather care, and living a life worth recording.",
 };
-
 
 export default function BlogPage() {
   const [featured, ...rest] = blogPosts;
@@ -24,11 +23,25 @@ export default function BlogPage() {
           Stories & Guides
         </p>
         <h1
-          className="text-4xl font-bold text-[#2C2C2C]"
+          className="text-4xl font-bold text-[#2C2C2C] mb-8"
           style={{ fontFamily: "'Playfair Display', serif" }}
         >
           The Journal
         </h1>
+
+        {/* Category nav */}
+        <div className="flex flex-wrap justify-center gap-3">
+          {categories.map((cat) => (
+            <Link
+              key={cat.slug}
+              href={`/blog/category/${cat.slug}`}
+              className="px-4 py-1.5 border border-[#C8B8A0] text-xs tracking-widest uppercase text-[#6B3A2A] hover:bg-[#6B3A2A] hover:text-[#FAF7F2] hover:border-[#6B3A2A] transition-all"
+              style={{ fontFamily: "'Cinzel', serif" }}
+            >
+              {cat.name}
+            </Link>
+          ))}
+        </div>
       </section>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -46,14 +59,24 @@ export default function BlogPage() {
               />
             </div>
             <div>
-              <span
-                className="text-xs tracking-widest uppercase text-[#C49A3C]"
-                style={{ fontFamily: "'Cinzel', serif" }}
-              >
-                Featured
-              </span>
+              <div className="flex items-center gap-3 mb-2">
+                <span
+                  className="text-xs tracking-widest uppercase text-[#C49A3C]"
+                  style={{ fontFamily: "'Cinzel', serif" }}
+                >
+                  Featured
+                </span>
+                {featured.category && (
+                  <span
+                    className="text-xs tracking-widest uppercase text-[#888] border-l border-[#C8B8A0] pl-3"
+                    style={{ fontFamily: "'Cinzel', serif" }}
+                  >
+                    {getCategoryBySlug(featured.category)?.name}
+                  </span>
+                )}
+              </div>
               <h2
-                className="text-3xl font-bold text-[#2C2C2C] group-hover:text-[#6B3A2A] transition-colors mt-2 mb-3 leading-snug"
+                className="text-3xl font-bold text-[#2C2C2C] group-hover:text-[#6B3A2A] transition-colors mb-3 leading-snug"
                 style={{ fontFamily: "'Playfair Display', serif" }}
               >
                 {featured.title}
@@ -86,6 +109,14 @@ export default function BlogPage() {
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
               </div>
+              {post.category && (
+                <span
+                  className="text-xs tracking-widest uppercase text-[#C49A3C] mb-1 block"
+                  style={{ fontFamily: "'Cinzel', serif" }}
+                >
+                  {getCategoryBySlug(post.category)?.name}
+                </span>
+              )}
               <h3
                 className="text-lg font-semibold text-[#2C2C2C] group-hover:text-[#6B3A2A] transition-colors leading-snug mb-2"
                 style={{ fontFamily: "'Playfair Display', serif" }}

@@ -1,3 +1,27 @@
+export type BlogCategory = "mission-life" | "church-leaders" | "journaling" | "gift-guides" | "leather-and-craft";
+
+export interface CategoryInfo {
+  slug: BlogCategory;
+  name: string;
+  description: string;
+}
+
+export const categories: CategoryInfo[] = [
+  { slug: "mission-life", name: "Mission Life", description: "Guides, reflections, and practical wisdom for missionaries in the field and those preparing to go." },
+  { slug: "church-leaders", name: "For Church Leaders", description: "Ideas and inspiration for bishops, Relief Society presidents, and youth leaders who want to build a culture of record-keeping." },
+  { slug: "journaling", name: "Journaling", description: "The why and how of putting pen to paper — scripture study, daily writing, and the case for handwritten records." },
+  { slug: "gift-guides", name: "Gift Guides", description: "Thoughtful, lasting gift ideas for missionaries, scripture lovers, and anyone who deserves something handmade." },
+  { slug: "leather-and-craft", name: "Leather & Craft", description: "How to choose, care for, and understand the genuine leather journals we make by hand." },
+];
+
+export function getCategoryBySlug(slug: string): CategoryInfo | undefined {
+  return categories.find((c) => c.slug === slug);
+}
+
+export function getPostsByCategory(category: BlogCategory): BlogPost[] {
+  return blogPosts.filter((p) => p.category === category);
+}
+
 export interface BlogPost {
   slug: string;
   title: string;
@@ -7,6 +31,7 @@ export interface BlogPost {
   readTime: string;
   author: string;
   authorRole: string;
+  category: BlogCategory;
   content: string; // HTML string
 }
 
@@ -21,6 +46,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "8 min read",
     author: "Benjamin S. Fowler",
     authorRole: "Maker & Founder, Covenant Leather Co.",
+    category: "mission-life",
     content: `
       <p>I've sent dozens of missionaries into the field. And I've noticed something: the ones who come home with the richest memories are almost always the ones who wrote things down.</p>
 
@@ -107,6 +133,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "6 min read",
     author: "Benjamin S. Fowler",
     authorRole: "Maker & Founder, Covenant Leather Co.",
+    category: "leather-and-craft",
     content: `
       <p>I've been making leather journals for missionaries for years. I've also seen what happens to the ones that weren't made well — covers that peel, bindings that crack, pages that yellow after six months in a tropical climate.</p>
 
@@ -188,6 +215,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "5 min read",
     author: "Benjamin S. Fowler",
     authorRole: "Maker & Founder, Covenant Leather Co.",
+    category: "gift-guides",
     content: `
       <p>I've given a lot of gifts to missionaries. As a bishop, sending young men and women into the field was one of the most significant things I did — and I wanted the gifts I gave to reflect that.</p>
 
@@ -252,6 +280,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "4 min read",
     author: "Benjamin S. Fowler",
     authorRole: "Maker & Founder, Covenant Leather Co.",
+    category: "leather-and-craft",
     content: `
       <p>Genuine leather is not a finished product. It's an ongoing one. The hide that covers your journal was once alive, and in some meaningful sense it still is — it breathes, it absorbs, it responds to how you treat it.</p>
 
@@ -331,6 +360,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "7 min read",
     author: "Benjamin S. Fowler",
     authorRole: "Maker & Founder, Covenant Leather Co.",
+    category: "journaling",
     content: `
       <p>We live in an age when every thought can be captured instantly, stored infinitely, and searched in seconds. Your phone knows more about your daily life than any journal ever could — your location, your photos, your messages, the music you played at midnight when you couldn't sleep.</p>
 
@@ -389,6 +419,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "7 min read",
     author: "Benjamin S. Fowler",
     authorRole: "Maker & Founder, Covenant Leather Co.",
+    category: "church-leaders",
     content: `
       <p>I know what it feels like to sit across from a nineteen-year-old who just got their call. The nervousness that tries to look like confidence. The parents behind them who are barely holding it together. The weight of knowing that you — their bishop — are the last shepherd they'll have before they walk into something enormous.</p>
 
@@ -464,6 +495,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "6 min read",
     author: "Benjamin S. Fowler",
     authorRole: "Maker & Founder, Covenant Leather Co.",
+    category: "mission-life",
     content: `
       <p>When you're on your mission, the journal feels like homework. One more thing to do at the end of a long day, when your legs ache and your companion is already asleep and the light in the apartment is bad.</p>
 
@@ -532,6 +564,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "6 min read",
     author: "Benjamin S. Fowler",
     authorRole: "Maker & Founder, Covenant Leather Co.",
+    category: "church-leaders",
     content: `
       <p>President Henry B. Eyring once said he made a habit of writing down, every day, how he had seen the hand of God in his life. He said that as he wrote, his ability to <em>recognize</em> God's influence increased. The act of recording didn't just preserve what had already happened — it sharpened his ability to see what was happening.</p>
 
@@ -606,6 +639,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "7 min read",
     author: "Benjamin S. Fowler",
     authorRole: "Maker & Founder, Covenant Leather Co.",
+    category: "journaling",
     content: `
       <p>There is a difference between reading scripture and studying scripture, and the difference is almost always a pen.</p>
 
@@ -677,6 +711,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "8 min read",
     author: "Benjamin S. Fowler",
     authorRole: "Maker & Founder, Covenant Leather Co.",
+    category: "mission-life",
     content: `
       <p>When I started making journals for missionaries, I assumed the obvious: they'd want to write about baptisms, spiritual experiences, and the big moments. And they do. But when I talked to returned missionaries — really talked to them, years after they'd come home — I discovered that the things they most wish they'd recorded are almost never the things you'd expect.</p>
 
@@ -751,6 +786,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "5 min read",
     author: "Benjamin S. Fowler",
     authorRole: "Maker & Founder, Covenant Leather Co.",
+    category: "church-leaders",
     content: `
       <p>A bishop's calling is temporary. The average is about five years, though it doesn't feel average when you're in it. During that time, you will conduct hundreds of interviews, extend dozens of callings, minister through crises you never expected, and preside over a ward full of people who need more than you have.</p>
 

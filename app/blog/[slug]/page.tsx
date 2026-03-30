@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { blogPosts, getPostBySlug } from "@/lib/blog";
+import { blogPosts, getPostBySlug, getCategoryBySlug } from "@/lib/blog";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -77,12 +77,27 @@ export default async function BlogPostPage({ params }: Props) {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#2C2C2C] via-transparent to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 max-w-3xl mx-auto px-4 pb-10">
-          <p
-            className="text-xs tracking-[0.3em] uppercase text-[#C49A3C] mb-3"
-            style={{ fontFamily: "'Cinzel', serif" }}
-          >
-            The Journal
-          </p>
+          <div className="flex items-center gap-3 mb-3">
+            <Link
+              href="/blog"
+              className="text-xs tracking-[0.3em] uppercase text-[#C49A3C] hover:text-[#FAF7F2] transition-colors"
+              style={{ fontFamily: "'Cinzel', serif" }}
+            >
+              The Journal
+            </Link>
+            {post.category && (
+              <>
+                <span className="text-[#C49A3C]">/</span>
+                <Link
+                  href={`/blog/category/${post.category}`}
+                  className="text-xs tracking-[0.3em] uppercase text-[#C49A3C] hover:text-[#FAF7F2] transition-colors"
+                  style={{ fontFamily: "'Cinzel', serif" }}
+                >
+                  {getCategoryBySlug(post.category)?.name}
+                </Link>
+              </>
+            )}
+          </div>
           <h1
             className="text-3xl sm:text-4xl font-bold text-white leading-tight"
             style={{ fontFamily: "'Playfair Display', serif" }}

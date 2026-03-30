@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getAllProducts } from "@/sanity/queries";
-import { blogPosts } from "@/lib/blog";
+import { blogPosts, categories } from "@/lib/blog";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const base = "https://covenantleatherco.com";
@@ -29,5 +29,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     changeFrequency: "yearly" as const,
   }));
 
-  return [...staticPages, ...productPages, ...blogPages];
+  const categoryPages = categories.map((c) => ({
+    url: `${base}/blog/category/${c.slug}`,
+    priority: 0.6,
+    changeFrequency: "weekly" as const,
+  }));
+
+  return [...staticPages, ...productPages, ...blogPages, ...categoryPages];
 }
